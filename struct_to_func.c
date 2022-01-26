@@ -8,7 +8,8 @@ struct rechteck
 
 int umfang(struct rechteck*);
 
-int main(int argc, char ** argv) {
+int main() 
+{
   struct rechteck r;
   r.a = 21;
   r.b = 30;
