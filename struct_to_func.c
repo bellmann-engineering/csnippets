@@ -13,5 +13,10 @@ int umfang(struct rechteck * rp) {
 }
 
 int main(int argc, char ** argv) {
+  struct rechteck r;
+  r.a = 21;
+  r.b = 30;
+  printf("Umfang: %d\n", umfang(&r));
+  
   return 0;
 }
