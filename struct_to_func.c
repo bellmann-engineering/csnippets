@@ -1,16 +1,12 @@
 #include <stdio.h>
 
-struct rechteck {
+struct rechteck 
+{
   int a;
   int b;
 };
 
-int umfang(struct rechteck * rp) {
-  return rp->a + rp->b;
-  // Adresse von rp->a ist 0
-  // Adresse von rp->b ist die Adresse von rp->a + sizeof(rp->a)
-  // Adresse von rp->b ist 4
-}
+int umfang(struct rechteck*);
 
 int main(int argc, char ** argv) {
   struct rechteck r;
@@ -19,4 +15,12 @@ int main(int argc, char ** argv) {
   printf("Umfang: %d\n", umfang(&r));
   
   return 0;
+}
+
+int umfang(struct rechteck* rp) 
+{
+  return rp->a + rp->b;
+  // Adresse von rp->a ist 0
+  // Adresse von rp->b ist die Adresse von rp->a + sizeof(rp->a)
+  // Adresse von rp->b ist 4
 }
