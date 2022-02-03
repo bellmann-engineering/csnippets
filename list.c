@@ -4,21 +4,24 @@
 
 typedef struct List 
 {
-    int id;
-    char name[32];
-    struct List *next;
+    int id; 
+    char name[50]; // Datenspeicher
+    struct List* next; // zeigt aufs nächste 
 } List;
 
-struct List* addToList(int, char*);
+List* addToList(int, char*);
 
 int main()
 {
     List* start = NULL;
 	List* node = NULL;
-    start = addToList(1, "Kai");
-    start->next = addToList(2, "Oliver");
+	
+    start = addToList(1, "Kai"); // next zeigt auf null
+    start->next = addToList(2, "Oliver"); // next zeigt auf oliver element
     start->next->next = addToList(3, "Sven"); 
-
+	// ^    ^    ^
+	// Kai  Oli  Sven
+	
     node = start; 
 
     while(node != NULL)
@@ -32,7 +35,7 @@ int main()
 	{ 
         node = start;
         start = node->next;
-        free(node);
+        free(node); // freigegeben
     }
     return 0;
 }
