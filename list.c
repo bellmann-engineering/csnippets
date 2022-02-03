@@ -13,7 +13,8 @@ struct List* addToList(int, char*);
 
 int main()
 {
-    struct List *start, *node;
+    List* start = NULL;
+	List* node = NULL;
     start = addToList(1, "Kai");
     start->next = addToList(2, "Oliver");
     start->next->next = addToList(3, "Sven"); 
