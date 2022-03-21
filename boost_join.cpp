@@ -1,3 +1,5 @@
+// g++ boost_join.cpp -o join -I /opt/homebrew/opt/boost@1.78/include/
+
 #include <boost/algorithm/string.hpp>
 #include <string>
 #include <vector>
